@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Spiritual Aggregator WebRTC Demo -</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/css/room.opentok.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class="main">
+      <div class="tc-dialog">
+        <h1>
+          <a href="http://brainitec.com/contact">
+            <img src="/images/tokbox-log.svg" alt="opentok transparent logo" height='60px'>
+          </a>
+          webinar Archive:
+          <%=archiveName%>
+        </h1>
+        <div id="roomContainer">
+          <video id="archiveVideo" src="<%=archiveURL%>" autoplay="" controls="true"></video>
+          <br>
+          <br>
+          <a href="<%=archiveURL%>" class="btn btn-blue btn-no-underline ctaarrow-white" download="<%=archiveName%>.mp4"></a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i[ 'GoogleAnalyticsObject' ] = r; i[ r ] = i[ r ] || function () {
+          (i[ r ].q = i[ r ].q || []).push(arguments)
+        }, i[ r ].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[ 0 ]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-462500-32', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+
+</html>
